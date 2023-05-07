@@ -1,0 +1,13 @@
+[user]
+	name = lipalipinski
+	email = lipabass@gmail.com
+	mail = lipabass@gmail.com
+[core]
+	autocrlf = false
+	safecrlf = warn
+  symlinks = true
+[alias]
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[gitreview]
+	remote = origin
+	username = lipalipinski
