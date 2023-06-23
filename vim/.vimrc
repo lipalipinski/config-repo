@@ -2,7 +2,7 @@
 syntax on
 
 " Jenkinsfile syntax
-autocmd BufRead,BufNewFile Jenkinsfile set filetype=groovy
+autocmd BufRead,BufNewFile Jenkinsfile,Jenkinsfile-* set filetype=groovy
 
 set autoindent expandtab tabstop=2 shiftwidth=2
 

@@ -11,3 +11,5 @@
 [gitreview]
 	remote = origin
 	username = lipalipinski
+[color]
+	ui = auto
