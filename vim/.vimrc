@@ -8,6 +8,11 @@ set autoindent expandtab tabstop=2 shiftwidth=2
 
 set modelines=0		" CVE-2007-2438
 
+" Dockerfile* synthax plugin
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+autocmd BufNewFile,BufRead Dockerfile* set syntax=dockerfile
+
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
 set nocompatible	" Use Vim defaults instead of 100% vi compatibility
