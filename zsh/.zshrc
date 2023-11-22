@@ -112,3 +112,4 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
