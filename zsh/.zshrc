@@ -1,12 +1,12 @@
 # add Maven to $PATH
-export PATH="/usr/local/apache-maven-3.9.1/bin":$PATH
+# export PATH="/usr/local/apache-maven-3.9.1/bin":$PATH
 # add python to $PATH
-export PATH="/Users/jlipinski/Library/Python/3.11/bin":$PATH
+# export PATH="/Users/jlipinski/Library/Python/3.11/bin":$PATH
 
-export NEXUS_HOME="/Users/jlipinski/nexus-oss"
-export MAVEN_HOME="/usr/local/apache-maven-3.9.1"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home"
-export JENKINS_HOME="/Users/jlipinski/.jenkins"
+# export NEXUS_HOME="/Users/jlipinski/nexus-oss"
+# export MAVEN_HOME="/usr/local/apache-maven-3.9.1"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home"
+# export JENKINS_HOME="/Users/jlipinski/.jenkins"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -112,5 +112,15 @@ source $ZSH/oh-my-zsh.sh
 alias k="kubectl"
 
 autoload -U +X bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+# AWS
+complete -C '/usr/local/bin/aws_completer' aws
+
+# Terraform 
 complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# kubectl 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
