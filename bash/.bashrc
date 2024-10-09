@@ -92,7 +92,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# kubectl alias
+# custom aliases
+alias tf='terraform'
 alias k='kubectl'
 
 # Add an "alert" alias for long running commands.  Use like so:
